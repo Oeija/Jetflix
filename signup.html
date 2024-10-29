@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page JeTFlix</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;600&family=Oswald:wght@400;500&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/signupstyle.css" />
+  </head>
+  <body>
+    <!-- Backbar start -->
+    <nav class="navbar">
+      <a href="index.html">
+        <div class="back">
+          <ion-icon name="arrow-back"></ion-icon>
+        </div>
+      </a>
+    </nav>
+    <!-- Backbar end -->
+
+    <!-- Form Section start-->
+    <section class="hero">
+      <h1>Sign Up Now For Free!</h1>
+      <div class="container">
+        <form id="form" action="#" method="GET" onsubmit="validateForm(event)">
+          <div class="input-box">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              placeholder="Enter your username"
+            />
+          </div>
+          <div class="input-box">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter password"
+            />
+          </div>
+          <div class="input-box">
+            <label for="password2">Confirm Password</label>
+            <input
+              id="password2"
+              name="password2"
+              type="password"
+              placeholder="Enter password again"
+            />
+          </div>
+          <div class="input-box">
+            <label for="birth">Date of Birth</label>
+            <input
+              id="birth"
+              name="birth"
+              type="date"
+              placeholder="Enter birth date"
+            />
+          </div>
+          <div class="gender-box">
+            <label for="gender">Gender</label>
+            <div class="gender-option">
+              <div class="gender">
+                <input id="male" name="gender" type="radio" />
+                <label for="check-male">Male</label>
+              </div>
+              <div class="gender">
+                <input id="female" name="gender" type="radio" />
+                <label for="check-female">Female</label>
+              </div>
+            </div>
+          </div>
+          <div class="check-box">
+            <input type="checkbox" id="agree" name="agree" />
+            <label for="agree">Agree to the Terms & Conditions</label>
+          </div>
+          <button type="submit">Sign Up</button>
+          <h2 id="error"></h2>
+        </form>
+      </div>
+    </section>
+    <!-- Form Section end -->
+
+    <!-- Footer start-->
+    <footer>
+      <div class="social">
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="youtube"></i></a>
+      </div>
+      <div class="link">
+        <a href="index.html">Home</a>
+        <a href="#newspopular">News & Popular</a>
+        <a href="#movies">Movies</a>
+      </div>
+      <div class="copyright">
+        <p>&copy; JETFLIX, 2023. ALL RIGHTS RESERVED</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- Ionicons Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Javascript -->
+    <script src="JS/signupscript.js" defer></script>
+  </body>
+</html>

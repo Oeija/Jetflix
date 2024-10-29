@@ -1,0 +1,240 @@
+:root {
+  --redlight: #db0000;
+  --reddark: #831010;
+  --grey: #564d4d;
+  --grey2: #aca4a4;
+  --white: #ffffff;
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg);
+  color: #ffffff;
+}
+
+/* Backbar */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.8rem 7%;
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .back {
+  color: #ffffff;
+  font-size: 4.125rem;
+}
+
+/* Form Section */
+.hero {
+  min-height: 100vh;
+  padding: 10rem 1.4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../IMAGE/Jetflix TV.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px -87px 92px 1.5px #000000;
+}
+
+.hero h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 4.375rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hero .container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.hero .container .input-box {
+  width: 100%;
+  margin-top: 1.75rem;
+}
+
+.hero .container .input-box label {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.hero .container .input-box input {
+  position: relative;
+  height: 3.125rem;
+  width: 100%;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0 0.938rem;
+}
+
+.hero .container .gender-box {
+  margin-top: 1.75rem;
+}
+
+.hero .container .gender-box label {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.container :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.container .gender {
+  column-gap: 0.3rem;
+  cursor: pointer;
+}
+
+.container .gender label {
+  margin: 0.3rem 0;
+}
+
+.container :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+
+.hero .container .check-box {
+  margin-top: 2rem;
+}
+
+.container .check-box {
+  display: flex;
+  align-items: center;
+}
+
+.container .check-box label {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 0.5rem;
+}
+
+.container button {
+  height: 3.438rem;
+  width: 100%;
+  background-color: #831010;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border: none;
+  margin-top: 0.3rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.container h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #db0000;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0c0c0c;
+  text-align: center;
+  padding: 1rem 0 3rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+
+footer .social a {
+  color: #ffffff;
+  margin: 1rem;
+}
+
+footer .link a:hover,
+footer .social a:hover {
+  color: var(--redlight);
+}
+
+footer .link {
+  margin-bottom: 1.4rem;
+}
+
+footer .link a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  text-decoration: underline;
+}
+
+footer .copyright {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero .container .input-box label {
+    font-size: 1.2rem;
+  }
+
+  .hero .container .gender-box label {
+    font-size: 1.2rem;
+  }
+
+  .container .check-box label {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

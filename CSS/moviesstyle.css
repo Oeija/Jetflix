@@ -1,0 +1,452 @@
+:root {
+  --redlight: #db0000;
+  --reddark: #831010;
+  --grey: #564d4d;
+  --grey2: #aca4a4;
+  --white: #ffffff;
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg);
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 3.6rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: "400";
+  color: #db0000;
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.563rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0rem 3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--redlight);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--redlight);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--redlight);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background-image: url("../IMAGE/Movies Page Jumbotron.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px -87px 92px 1.5px #000000;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 10%
+  );
+}
+
+.hero .main {
+  padding: 10rem 7% 1.4rem;
+  width: 80rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .main .spy-logo {
+  margin-bottom: 1.5rem;
+}
+
+.hero .main .genre {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero .main .genre p {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.hero .main .genre .age {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.3rem;
+  margin-right: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.hero .main .genre .kind {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 3rem;
+  margin-right: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.hero .main .achievement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero .main .achievement .like {
+  display: flex;
+  align-items: center;
+}
+
+.hero .main .achievement .like .like-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #831010;
+  border: none;
+  border-radius: 3rem;
+  margin-right: 0.7rem;
+  color: #ffffff;
+}
+
+.hero .main .achievement .like .like-button .button-like {
+  margin-left: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.hero .main .achievement .like h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-right: 3rem;
+}
+
+.hero .main .achievement .rank {
+  display: flex;
+  align-items: center;
+}
+
+.hero .main .achievement .rank .rank-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 0.6rem;
+  background-color: #831010;
+  border: none;
+  border-radius: 0.2rem;
+  margin-right: 0.7rem;
+  color: #ffffff;
+}
+
+.hero .main .achievement .rank h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.hero .main .desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  width: 90%;
+}
+
+.hero .main .details .detail {
+  display: inline-block;
+  align-items: center;
+  padding: 1rem 3.5rem;
+  background-color: rgba(86, 77, 77, 0.5);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.875rem;
+  color: #ffffff;
+  border-radius: 0.4rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+/* Movies Section */
+.list .action {
+  padding: 0 7% 1.4rem;
+}
+
+.list .action .header-action h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 3.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list .action .action-movies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.list .action .action-movies img {
+  margin-right: 1.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.list .kids {
+  padding: 0 7% 1.4rem;
+}
+
+.list .kids .header-kids h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+.list .kids .kids-movies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.list .kids .kids-movies img {
+  margin-right: 1.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.list .romance {
+  padding: 0 7% 1.4rem;
+}
+
+.list .romance .header-romance h5 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+.list .romance .romance-movies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.list .romance .romance-movies img {
+  margin-right: 1.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.list .horror {
+  padding: 0 7% 1.4rem;
+}
+
+.list .horror .header-horror h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+.list .horror .horror-movies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.list .horror .horror-movies img {
+  margin-right: 1.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #0c0c0c;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 2rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+
+footer .social a {
+  color: #ffffff;
+  margin: 1rem;
+}
+
+footer .link a:hover,
+footer .social a:hover {
+  color: var(--redlight);
+}
+
+footer .link {
+  margin-bottom: 1.4rem;
+}
+
+footer .link a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  text-decoration: underline;
+}
+
+footer .copyright {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--redlight);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .hero .main .spy-logo img {
+    width: 400px;
+  }
+
+  .hero .main .desc {
+    font-size: 1.4rem;
+    width: 60%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
